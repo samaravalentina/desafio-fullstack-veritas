@@ -1,0 +1,57 @@
+### Testes da API - Kanban de Tarefas
+### Use com extensão REST Client do VS Code ou similar
+
+### Base URL
+@baseUrl = http://localhost:8080
+
+### 1. Listar todas as tarefas
+GET {{baseUrl}}/tasks
+Content-Type: application/json
+
+### 2. Criar uma nova tarefa - A Fazer
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Implementar funcionalidade X",
+  "description": "Descrição detalhada da tarefa",
+  "status": "todo"
+}
+
+### 3. Criar uma nova tarefa - Em Progresso
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Revisar código",
+  "description": "Revisar o código do backend",
+  "status": "in_progress"
+}
+
+### 4. Criar uma nova tarefa - Concluída
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Configurar projeto",
+  "description": "Projeto configurado com sucesso",
+  "status": "done"
+}
+
+### 5. Atualizar uma tarefa (substitua :id pelo ID real)
+PUT {{baseUrl}}/tasks/1
+Content-Type: application/json
+
+{
+  "title": "Tarefa atualizada",
+  "description": "Nova descrição",
+  "status": "in_progress"
+}
+
+### 6. Excluir uma tarefa (substitua :id pelo ID real)
+DELETE {{baseUrl}}/tasks/1
+
+### 7. Listar tarefas novamente para verificar
+GET {{baseUrl}}/tasks
+Content-Type: application/json
+

@@ -1,0 +1,24 @@
+# Binários
+/bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Arquivos de teste
+*.test
+
+# Output do compilador
+*.out
+
+# Arquivos de dados
+tasks.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
