@@ -61,6 +61,11 @@
   gap: 8px;
 }
 
+.status-label {
+  font-size: 0.9rem;
+  color: #333;
+}
+
 .status-select {
   padding: 5px 10px;
   border: 1px solid #ddd;
@@ -80,4 +85,3 @@
   color: #999;
   font-size: 0.8rem;
 }
-

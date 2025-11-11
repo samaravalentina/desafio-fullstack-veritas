@@ -47,12 +47,13 @@ const TaskCard = ({ task, onMoveTask, onEditTask, onDeleteTask }) => {
           </button>
         </div>
       </div>
-      
+
       {task.description && (
         <p className="task-description">{task.description}</p>
       )}
 
       <div className="task-footer">
+        <label htmlFor="status" className="status-label">Alterar Status:</label>
         <select
           className="status-select"
           value={task.status}
@@ -64,7 +65,7 @@ const TaskCard = ({ task, onMoveTask, onEditTask, onDeleteTask }) => {
             </option>
           ))}
         </select>
-        
+
         <div className="task-date">
           <small>Criada em: {formatDate(task.createdAt)}</small>
         </div>

@@ -16,11 +16,6 @@ const TaskForm = ({ task, onSubmit, onCancel }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    if (!title.trim()) {
-      alert('O título é obrigatório!');
-      return;
-    }
 
     onSubmit({
       title: title.trim(),
