@@ -20,9 +20,7 @@ function App() {
       setLoading(true);
       setError(null);
       const data = await getTasks();
-      console.log(data)
       setTasks(data);
-      console.log(tasks)
     } catch (err) {
       setError('Erro ao carregar tarefas. Verifique se o backend está rodando.');
       console.error('Erro ao carregar tarefas:', err);
@@ -107,8 +105,8 @@ function App() {
       <header className="app-header">
         <h1>📋 Kanban de Tarefas</h1>
         {!showForm && (
-          <button 
-            className="btn btn-primary" 
+          <button
+            className="btn btn-primary"
             onClick={() => setShowForm(true)}
           >
             + Nova Tarefa
@@ -126,7 +124,7 @@ function App() {
       {showForm && (
         <TaskForm
           task={editingTask}
-          onSubmit={editingTask ? 
+          onSubmit={editingTask ?
             (data) => handleUpdateTask(editingTask.id, data) : handleCreateTask
           }
           onCancel={handleCancelForm}
